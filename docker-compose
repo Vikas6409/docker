@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nginx:
+    image: dexter6409/student:my-nginx-reverse-proxy # Replace with the actual image name
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  backend:
+    image: dexter6409/student:student2  # Replace with the actual image name
+    ports:
+      - "8080:8080"
+   
